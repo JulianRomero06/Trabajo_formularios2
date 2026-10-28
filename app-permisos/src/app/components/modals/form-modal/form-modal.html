@@ -1,0 +1,116 @@
+<form class="space-y-5" autocomplete="off" (submit)="onSubmit($event)">
+  <div class="space-y-2">
+    <label for="beneficiario" class="app-text-muted block text-xs font-bold uppercase tracking-widest">
+      Nombre beneficiario
+    </label>
+    <select id="beneficiario" name="beneficiario" class="app-input-bg app-input-border app-input-shell app-text-primary w-full rounded-xl border px-4 py-3.5 text-lg"
+    >
+      <option selected disabled>-- Seleccionar beneficiario --</option>
+      <option>Funcionario 1</option>
+      <option>Funcionario 2</option>
+    </select>
+  </div>
+
+  <div class="space-y-2">
+    <label for="funcionario" class="app-text-muted block text-xs font-bold uppercase tracking-widest">
+      Nombre y apellidos funcionario
+    </label>
+    <input
+      id="funcionario"
+      name="funcionario"
+      type="text"
+      placeholder="Nombre completo del funcionario"
+      class="app-input-bg app-input-border app-input-placeholder app-input-shell app-text-primary w-full rounded-xl border px-4 py-3.5 text-lg"
+    />
+  </div>
+
+  <div class="space-y-2">
+    <label for="fecha-inicio" class="app-text-muted block text-xs font-bold uppercase tracking-widest">
+      Fecha inicio comision
+    </label>
+    <input
+      id="fecha-inicio"
+      name="fechaInicio"
+      type="date"
+      class="app-input-bg app-input-border app-input-shell app-text-primary w-full rounded-xl border px-4 py-3.5 text-lg"
+    />
+  </div>
+
+  <div class="space-y-2">
+    <label for="fecha-final" class="app-text-muted block text-xs font-bold uppercase tracking-widest">
+      Fecha final comision
+    </label>
+    <input
+      id="fecha-final"
+      name="fechaFinal"
+      type="date"
+      class="app-input-bg app-input-border app-input-shell app-text-primary w-full rounded-xl border px-4 py-3.5 text-lg"
+    />
+  </div>
+
+  <div class="space-y-2">
+    <label for="acto" class="app-text-muted block text-xs font-bold uppercase tracking-widest">
+      Numero acto administrativo
+    </label>
+    <input
+      id="acto"
+      name="acto"
+      type="text"
+      placeholder="Ej: Resolucion 0123 de 2025"
+      class="app-input-bg app-input-border app-input-placeholder app-input-shell app-text-primary w-full rounded-xl border px-4 py-3.5 text-lg"
+    />
+  </div>
+
+  <div class="space-y-2">
+    <label for="destino" class="app-text-muted block text-xs font-bold uppercase tracking-widest">
+      Destino comision
+    </label>
+    <input
+      id="destino"
+      name="destino"
+      type="text"
+      placeholder="Ciudad / Municipio / Pais"
+      class="app-input-bg app-input-border app-input-placeholder app-input-shell app-text-primary w-full rounded-xl border px-4 py-3.5 text-lg"
+    />
+  </div>
+
+  <div class="space-y-2">
+    <label for="estado" class="app-text-muted block text-xs font-bold uppercase tracking-widest">
+      Estado de la comision
+    </label>
+    <select
+      id="estado"
+      name="estado"
+      class="app-input-bg app-input-border app-input-shell app-text-primary w-full rounded-xl border px-4 py-3.5 text-lg"
+    >
+      <option selected disabled>-- Seleccionar --</option>
+      <option>Activa</option>
+      <option>Finalizada</option>
+      <option>Cancelada</option>
+    </select>
+  </div>
+
+  <div *ngIf="successMessage" class="rounded-xl border border-emerald-700/50 bg-emerald-950/50 px-4 py-3 text-sm text-emerald-200">
+    {{ successMessage }}
+  </div>
+
+  <div *ngIf="errorMessage" class="rounded-xl border border-red-700/50 bg-red-950/50 px-4 py-3 text-sm text-red-200">
+    {{ errorMessage }}
+  </div>
+
+  <div class="grid gap-3 pt-3 sm:grid-cols-2">
+    <button
+      type="submit"
+      [disabled]="isSubmitting"
+      class="app-button app-focus-ring w-full rounded-xl px-4 py-3.5 text-lg font-bold transition disabled:cursor-not-allowed disabled:opacity-60"
+    >
+      Guardar Comision
+    </button>
+    <button
+      type="reset"
+      class="app-focus-ring w-full rounded-xl border border-indigo-700/60 bg-indigo-950/60 px-4 py-3.5 text-lg font-bold text-indigo-100 transition hover:bg-indigo-900/70"
+    >
+      Limpiar
+    </button>
+  </div>
+</form>

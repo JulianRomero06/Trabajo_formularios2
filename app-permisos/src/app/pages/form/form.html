@@ -1,0 +1,20 @@
+<section class="app-page-text relative min-h-screen overflow-hidden">
+	<div class="app-hero-gradient pointer-events-none absolute inset-0"></div>
+
+	<div class="relative min-h-screen">
+		<app-nav></app-nav>
+
+		<main class="mx-auto w-full max-w-6xl px-4 pb-10 pt-6 sm:px-6">
+			<article class="app-card app-card-border rounded-2xl border p-6 sm:p-8">
+				<header class="mb-7">
+					<h1 class="app-text-primary text-4xl font-black leading-tight">Nueva Comision</h1>
+					<p class="app-text-secondary mt-2 text-base">Complete los campos y presione Guardar.</p>
+				</header>
+
+				<ng-container *ngComponentOutlet="formFieldsComponent"></ng-container>
+			</article>
+
+			<app-footer></app-footer>
+		</main>
+	</div>
+</section>

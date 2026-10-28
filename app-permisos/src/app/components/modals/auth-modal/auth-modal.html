@@ -1,0 +1,32 @@
+<div class="space-y-7 px-9 pb-10 pt-8">
+  <div class="app-panel-bg rounded-2xl p-1.5">
+    <div class="grid grid-cols-2 gap-1.5">
+      <button type="button" class="app-tab-active rounded-xl px-4 py-3 text-base font-semibold">
+        Funcionario
+      </button>
+      <button
+        type="button"
+        class="app-text-muted app-text-secondary-hover rounded-xl px-4 py-3 text-base font-semibold transition"
+      >
+        Administrador
+      </button>
+    </div>
+  </div>
+
+  <form class="space-y-7" autocomplete="off">
+    <div class="space-y-2.5">
+      <label for="cedula" class="app-text-muted block text-sm font-semibold uppercase tracking-widest">
+        Numero de cedula
+      </label>
+      <input id="cedula" type="text" inputmode="numeric" placeholder="Ej: 1098765432" class="app-input-bg app-input-border app-input-placeholder app-input-shell app-text-primary w-full rounded-xl border px-4 py-4 text-lg"
+      />
+    </div>
+
+    <a
+      routerLink="/form"
+      class="app-button app-focus-ring block w-full rounded-xl px-4 py-4 text-center text-xl font-bold transition"
+    >
+      Ingresar ->
+    </a>
+  </form>
+</div>
